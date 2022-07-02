@@ -1,0 +1,378 @@
+@import url(grid.css);
+@import url(fonts.css);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none !important;
+    color: #fff;
+    font-family: BYekan;
+}
+
+body {
+    background-color: #001d3d;
+    font-family: BYekan !important;
+    direction: rtl;
+    line-height: 1.2rem;
+    color: #fff;
+}
+
+button {
+    background: none;
+    border: none;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: .8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button, input {
+    font-family: BYekan !important;
+}
+
+.text-danger {
+    color: #ff477e;
+}
+
+.text-size-small {
+    font-size: .7rem;
+}
+
+.button-primary {
+    color: #fff;
+    background-color: #005CE6;
+    transition: 0.4s;
+}
+
+.button-primary:hover {
+    transition: 0.4s;
+    box-shadow: 0 1px 13px 0 #005CE6;
+}
+
+.button-warning {
+    color: #000;
+    background-color: #ffd166;
+    transition: 0.4s;
+}
+
+.button-warning:hover {
+    transition: 0.4s;
+    box-shadow: 0 1px 13px 0 #ffd166;
+}
+
+.button-danger {
+    color: #fff;
+    background-color: #ff4d6d;
+    transition: 0.4s;
+}
+
+.button-danger:hover {
+    transition: 0.4s;
+    box-shadow: 0 1px 13px 0 #ff4d6d;
+}
+
+.radio {
+    border-radius: 100%;
+}
+
+.p-1 {
+    padding: 1rem;
+}
+
+/* backgrounds */
+
+.bg-danger {
+    background-color: #ff4d6d !important;
+    color: #fff !important;
+}
+
+.bg-success {
+    background-color: #b5e48c !important;
+    color: #000 !important;
+}
+
+.bg-warning {
+    background-color: #ffd166 !important;
+    color: #000 !important;
+}
+
+.bg-info {
+    background-color: #393d3f !important;
+    color: #fff !important;
+}
+
+.bg-primary {
+    background-color: #005CE6 !important;
+    color: #fff !important;
+}
+
+/* Header */
+
+.header {
+    width: 100%;
+    height: 60px;
+    background-color: #000814;
+    color: #fff;
+}
+
+/* input area */
+
+.add-note, .edit-note {
+    width: 100%;
+    height: fit-content;
+    padding: 1.5rem 0;
+}
+
+.input-box {
+    width: 100%;
+    height: 3.5rem;
+}
+
+.input-box input, .input-box select {
+    border: none;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding: .5rem 1rem;
+    outline: none;
+    transition: all 0.3s;
+    border: 0.15rem solid #dcdddf;
+    width: 50%;
+    font-size: 1rem;
+    font-family: BYekan;
+}
+
+.input-box select {
+    width: 20%;
+    border-radius: 0;
+    font-size: .8rem;
+}
+
+.input-box select>option {
+    font-size: 1rem;
+}
+
+.input-box button {
+    width: 30%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+/* notes */
+
+.notes {
+    width: 100%;
+    height: fit-content;
+    padding: 1.5rem 0 6rem 0;
+    
+}
+
+.note {
+    width: calc(100% - 2rem);
+    border-radius: 15px;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.note p {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.note-container {
+    width: 100%;
+    position: relative;
+    
+}
+
+.done {
+    position: relative;
+}
+
+.done::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    border-radius: 15px;
+
+}
+
+.done::before {
+    content: '\2713';
+    position: absolute;
+    top: .5rem;
+    left: .5rem;
+    margin-left: .6rem;
+    z-index: 101;
+    font-weight: 500;
+    font-size: 1.2rem !important;
+    font-weight: bolder !important;
+    color: #00f5d4;
+}
+
+.editBtn {
+    border-radius: 15px;
+    font-size: 1rem;
+    font-weight: bolder;
+    position: absolute;
+    bottom: -1rem;
+    left: -1.5rem;
+    z-index: 100;
+}
+
+.deleteBtn {
+    border-radius: 15px;
+    font-size: 1rem;
+    font-weight: bolder;
+    position: absolute;
+    bottom: -1rem;
+    left: 2rem;
+    z-index: 100;
+}
+
+/* footer */
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 1000;
+}
+
+.footer-btn {
+    width: 100%;
+    background-color: #003566;
+    height: 100%;
+    font-size: 2rem;
+    font-weight: 900;
+    color: #fff;
+}
+
+/* input window */
+
+.input-window {
+    position: fixed;
+    top: calc(60px + 1rem);
+    width: 80%;
+    background-color: #495057;
+    height: 20rem;
+    margin-right: 10%;
+    z-index: 100001;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    row-gap: .4rem;
+}
+
+.input-window .input {
+    height: 67%;
+    width: 100%;
+}
+
+.input-window .input textarea {
+    width: calc(100% - 1rem);
+    height: calc(100% - 1rem);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border: none;
+    background-color: #495057;
+    outline: none;
+    resize: none !important;
+    padding: .5rem;
+    color: #fff;
+    font-size: 1.4rem;
+    transition: all .3s;
+    font-family: BYekan !important;
+}
+
+.input-window .input textarea:focus {
+    background-color: #343a40;
+}
+
+.color-select-box {
+    width: 100%;
+    height: 18%;
+    display: flex;
+    flex-direction: row;
+    column-gap: .2rem;
+}
+
+.color-box {
+    width: calc(100% / 5);
+    height: 100%;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.input-window-btns {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.input-window-btns button {
+    width: 50%;
+    font-size: 1rem;
+    color: #fff;
+    border-bottom-right-radius: 15px;
+    transition: .3s all;
+}
+
+.input-window-btns button:last-of-type {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 0;
+    background-color: #2ba84a;
+}
+
+.input-window-btns button:hover {
+    background-color: #343a40;
+}
+
+.input-window-btns button:last-of-type:hover {
+    background-color: #23883c;
+}
+
+.color-selected {
+    position: relative;
+}
+
+.color-selected::after {
+    content: '\2713';
+    position: absolute;
+    top: calc(50% - .4rem);
+    left: calc(50% - 1.2rem);
+    margin-left: .6rem;
+    z-index: 10000;
+    font-weight: 500;
+    font-size: 1.8rem !important;
+    font-weight: bolder !important;
+    color: #00f5d4;
+}
+
+.shadow {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 100000;
+    pointer-events: all;
+}
+
+.about {
+    margin-top: 2rem;
+    line-height: 2rem;
+}
